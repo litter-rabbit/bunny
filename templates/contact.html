@@ -124,6 +124,8 @@
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-9 c-form-right">
+                        <input name="email" type="email" class="input-txt input-email animate" data-name="邮箱"
+                               data-must="2" />
                         <div class="c-form-error animate">error</div>
                     </div>
                 </div>
@@ -138,7 +140,7 @@
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-9 c-form-right">
                         <input name="email" type="email" class="input-txt input-email animate" data-name="邮箱"
-                               data-must="2" placeholder="例）gsir@mfstory.cn"/>
+                               data-must="2" />
                         <div class="c-form-error animate">error</div>
                     </div>
                 </div>
@@ -255,7 +257,18 @@
 <script src="assets/js/canvas-particle.js"></script>
 <script src="../static/assets/js/wow.min.js"></script>
 <script src="https://lrabbit.oss-cn-beijing.aliyuncs.com/main.js"></script>
-
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oxlvdUxV5KHd4wDyGOGbsKGZVgQn4iTz"></script>
+		<script type="text/javascript">
+			var map = new BMap.Map("allmap");
+			var point = new BMap.Point(121.613139, 29.815951);
+			map.centerAndZoom(point, 18);
+			var marker = new BMap.Marker(point); // 创建标注
+			map.addOverlay(marker); // 将标注添加到地图中
+			marker.disableDragging(); // 不可拖拽
+			map.setMapStyle({
+				style: 'grayscale'
+			});
+		</script>
 
 </body>
 </html>
